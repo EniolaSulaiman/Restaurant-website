@@ -1,14 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TasteBite Restaurant</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-    <script src="main.js"></script>
+
+    <header class="site-header">
+        <div class="header-container">
+
+            <a href="#home" class="logo-link">
+                <img src="assets/logo.png" alt="TasteBite Restaurant Logo" class="restaurant-logo">
+            </a>
+
+            <button class="menu-button" aria-expanded="false" aria-controls="primary-navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-navigation" id="primary-navigation">
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#specials">Specials</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reservations">Reservations</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section id="home" class="hero-section">
+            <img src="assets/pizza-img.jpg" alt="Featured dish served at TasteBite" class="hero-image">
+            <div class="hero-content">
+                <h1 class="hero-title">Delicious Food, Cozy Atmosphere</h1>
+                <p class="hero-description">Freshly prepared meals made with love and local ingredients.</p>
+                <a href="#menu" class="hero-cta">View Menu</a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <header class="section-header">
+                <h2>About Us</h2>
+            </header>
+            <div class="about-wrapper">
+                <div class="about-text">
+                    <p>TasteBite is a family-owned restaurant focused on delivering rich flavors and memorable dining
+                        experiences.</p>
+                </div>
+                <figure class="about-image">
+                    <img src="" alt="Interior of TasteBite restaurant">
+                </figure>
+            </div>
+        </section>
+
+        <section id="menu" class="menu-section">
+            <header class="section-header">
+                <h2>Our Menu</h2>
+            </header>
+            <div class="menu-categories">
+
+                <article class="menu-category">
+                    <h3>Starters</h3>
+                    <ul class="menu-items">
+                        <li class="menu-item">
+                            <img src="" alt="Garlic bread starter">
+                            <div class="item-info">
+                                <span class="item-name">Garlic Bread</span>
+                                <span class="item-price">$5</span>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <img src="" alt="Chicken wings starter">
+                            <div class="item-info">
+                                <span class="item-name">Chicken Wings</span>
+                                <span class="item-price">$8</span>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="menu-category">
+                    <h3>Main Dishes</h3>
+                    <ul class="menu-items">
+                        <li class="menu-item">
+                            <img src="" alt="Grilled chicken main dish">
+                            <div class="item-info">
+                                <span class="item-name">Grilled Chicken</span>
+                                <span class="item-price">$15</span>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <img src="" alt="Seafood pasta dish">
+                            <div class="item-info">
+                                <span class="item-name">Seafood Pasta</span>
+                                <span class="item-price">$18</span>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="menu-category">
+                    <h3>Desserts</h3>
+                    <ul class="menu-items">
+                        <li class="menu-item">
+                            <img src="" alt="Chocolate cake dessert">
+                            <div class="item-info">
+                                <span class="item-name">Chocolate Cake</span>
+                                <span class="item-price">$6</span>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="specials" class="specials-section">
+            <header class="section-header">
+                <h2>Today's Specials</h2>
+            </header>
+            <article class="special-item">
+                <img src="" alt="Chef's special burger">
+                <div class="special-content">
+                    <h3>Chef's Special Burger</h3>
+                    <p>Served with fries and our secret house sauce.</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="gallery" class="gallery-section">
+            <header class="section-header">
+                <h2>Gallery</h2>
+            </header>
+            <div class="gallery-grid">
+                <figure class="gallery-item"><img src="" alt="Restaurant interior"></figure>
+                <figure class="gallery-item"><img src="" alt="Plated meal"></figure>
+                <figure class="gallery-item"><img src="" alt="Chef cooking in the kitchen"></figure>
+            </div>
+        </section>
+
+        <section id="reservations" class="reservations-section">
+            <header class="section-header">
+                <h2>Make a Reservation</h2>
+            </header>
+            <form class="reservation-form">
+                <label>Name <input type="text" name="name" required></label>
+                <label>Email <input type="email" name="email" required></label>
+                <label>Date <input type="date" name="date" required></label>
+                <label>Time <input type="time" name="time" required></label>
+                <label>Guests <input type="number" name="guests" min="1" required></label>
+                <button type="submit">Reserve Table</button>
+            </form>
+        </section>
+
+        <section class="testimonials-section">
+            <header class="section-header">
+                <h2>Customer Reviews</h2>
+            </header>
+            <article class="testimonial">
+                <img src="" alt="Photo of customer Alex">
+                <blockquote>“Amazing food and excellent service. I'm definitely coming back.”</blockquote>
+                <cite>— Alex</cite>
+            </article>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <header class="section-header">
+                <h2>Contact Us</h2>
+            </header>
+            <div class="contact-wrapper">
+                <address class="contact-details">
+                    <p>123 Food Street, Lagos</p>
+                    <p>Phone: <a href="tel:+2348000000000">+234 800 000 0000</a></p>
+                    <p>Email: <a href="mailto:info@tastebite.com">info@tastebite.com</a></p>
+                </address>
+                <div class="contact-map">
+                    <img src="" alt="Map showing TasteBite restaurant location">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 TasteBite Restaurant. All rights reserved.</p>
+    </footer>
+
+<script src="main.js"></script>
 </body>
+
 </html>
