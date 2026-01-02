@@ -357,6 +357,96 @@ cite {
     gap: 1rem;
 }
 
+/* Social container */
+.developer-socials {
+    list-style: none;
+    display: flex;
+    gap: 0.75rem;
+    padding: 0;
+    margin: 0;
+}
+
+/* Icon links */
+.social-item a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: var(--color-primary);
+    border-radius: 50%;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* SVG sizing */
+.social-item svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+/* Hover / focus */
+.social-item a:hover,
+.social-item a:focus-visible {
+    color: var(--color-primary-hover);
+    transform: translateY(-2px);
+}
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    font-size: 0.65rem;
+    padding: 0.3rem 0.45rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+/* Tooltip arrow */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--color-text);
+}
+
+/* Show tooltip */
+.social-item a:hover .tooltip,
+.social-item a:focus-visible .tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* 📱 Mobile tweaks */
+@media (max-width: 480px) {
+    .developer-socials {
+        justify-content: center;
+    }
+
+    .tooltip {
+        display: none;
+        /* avoid clutter on tiny screens */
+    }
+}
+
+/* 💻 Tablet & up */
+@media (min-width: 768px) {
+    .developer-socials {
+        justify-content: flex-start;
+    }
+}
+
 .contact-map img {
     border-radius: var(--radius-md);
     background-color: var(--color-placeholder);
