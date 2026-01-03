@@ -9,7 +9,7 @@ Built with best practices in frontend development, it features reusable CSS vari
 ---
 
 ## 🔗 Live Demo
-Check it out here: [Live Demo](https://your-github-username.github.io/your-repo-name/)
+Check it out here: [Live Demo](https://eniolasulaiman.github.io/Restaurant-website/)
 
 ---
 
